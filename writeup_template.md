@@ -134,18 +134,25 @@ Here are ten German traffic signs that I found on the web:
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Image			        						|     Prediction	        					| 
+|:---------------------------------------------:|:---------------------------------------------:| 
+| Yield      									| Yield   										| 
+| No passing for vehicles over 3.5 metric tons	| Ahead only									|
+| Speed limit (20km/h)							| Speed limit (80km/h)							|
+| General caution	      						| General caution				 				|
+| Bumpy road									| Bumpy road     								|
+| No vehicles									| Speed limit (80km/h)							|
+| Priority road									| Priority road     							|
+| Ahead only									| Ahead only     								|
+| Vehicles over 3.5 metric tons prohibited		| Vehicles over 3.5 metric tons prohibited		|
+| Right-of-way at the next intersection			| Right-of-way at the next intersection			|
+| Go straight or left							| Go straight or left							|
+| Speed limit (30km/h)							| Speed limit (30km/h)							|
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
 #### 3. Predicting on each of the new images by looking at the softmax probabilities for each prediction. The top 5 softmax probabilities for each image along with the sign type of each probability.
 
-he model is relatively sure that it predicts the right sign (probabilities range from 88% to 100%). However for the only one that the model makes a wrong prediction, we can notice the model is not very sure about it (45.26%). However, the right prediction is part of the top 5 softmax probalities with 2.31% probability.
+The model is relatively sure that it predicts the right sign (probabilities range from 98% to 100%). However for the three of the images model makes a wrong prediction, we can notice the model is not very sure about it (75%).
 
 ![image11](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/top5Probabilities.png)
