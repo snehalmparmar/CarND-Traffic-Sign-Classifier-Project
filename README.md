@@ -56,16 +56,25 @@ To work on this project consider following steps to setup your computer:
     
     jupyter notebook
   
-  Step3: If you have GIT installed in your computer, clone this project. Or download in your local drive. The command4 mentioned above will open jupyter notebook, navigate to the project you have cloned/dowanloaded and open `P1.ipynb`
-  
-**Run** `P1.ipynb` and check outputs in image folders and video output directory.
+  Step3: If you have GIT installed in your computer, clone this project. Or download in your local drive. 
+ 
+  Step4: Then download the dataset by following this [link](https://d17h27t6h515a5.cloudfront.net/topher/2017/February/5898cd6f_traffic-signs-data/traffic-signs-data.zip). This is a pickled dataset in which the images are already resized to 32x32.
+
+Create a *data/* folder at the root of the project and unzip the dataset files inside. You should now have 3 pickle files:
+
+```sh
+CarND-Traffic-Sign-Classifier-Project/
+ └── data/ 
+      ├── test.p
+      ├── train.p
+      └── valid.p
+``` 
+  Step5: The command4 mentioned above in Step2 will open jupyter notebook, navigate to the project you have cloned/dowanloaded and open `Traffic_Sign_Classifier.ipynb`
+**Run** `Traffic_Sign_Classifier.ipynb` and check outputs in folders `explorations` and `newImages`.
 
 **Deactivate** `carnd` environment using following command
   
     conda deactivate carnd
-
-## Dataset
-The image DataSet can be downloaded from this [Website](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset#Downloads)
     
 ## Questions & Feedback
 
