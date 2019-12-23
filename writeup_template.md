@@ -27,43 +27,25 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-[//]: # (Image References)
-
-[image1]: ./explorations/Training Explored.png "Training Data Explored"
-[image2]: ./explorations/Validation Explored.png "Validation Data Explored"
-[image3]: ./explorations/Test Explored.png "Test Data Explored"
-[image4]: ./explorations/TrainingImagePreprocessing.png "Sample image from training dataset"
-[image5]: ./explorations/ValidationImagePreprocessing.png "Sample image from validation dataset"
-[image6]: ./explorations/TestImagePreprocessing.png "Sample image from test dataset"
-[image7]: ./explorations/randomImagesPerLabel.png "Random set of images per label"
-[image8]: ./explorations/learningCurve.png "Neural network learning curve"
-[image9]: ./explorations/newDataSetImage.png "New dataset images"
-[image10]: ./explorations/New ImagesImagePreprocessing.png.png "Sample image from new dataset"
-[image11]: ./explorations/top5Probabilities.png "Top 5 probabilities"
-[image12]: ./newImages/1.png
-[image13]: ./newImages/2.png
-[image14]: ./newImages/3.png
-[image15]: ./newImages/4.png
-[image16]: ./newImages/5.png
-[image17]: ./newImages/6.png
-[image18]: ./newImages/7.png
-[image19]: ./newImages/8.png
-[image20]: ./newImages/9.png
-[image21]: ./newImages/10.png
-
 #### 2. Exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the training dataset (validation and testing dataset distribution could be found [here](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/tree/master/explorations)). It is a colored bar chart showing how the data is distributed across the different labels/sign names.
+   #### Training DataSet Distribution
+![Training DataSet Distribution](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/Training%20Explored.png) 
 
-![Training DataSet Distribution][image1]
+---
+   #### Validation DataSet Distribution
+![Validation DataSet Distribution](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/Validation%20Explored.png) 
 
-![Validation DataSet Distribution][image2]
-
-![Test DataSet Distribution][image3]
+---
+   #### Test DataSet Distribution
+![Test DataSet Distribution](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/Test%20Explored.png)
 
 Here is a visualization of 15 random images from the training dataset for each 43 classes. Due to weather conditions, time of the day, lighting, and image orientation we can notice big differences in appearance between each image.
 
-![Random images from the training dataset][image7]
+---
+   #### Random images from the training dataset
+![Random images from the training dataset](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/randomImagesPerLabel.png)
 
 ### Design and Test a Model Architecture
 
@@ -76,12 +58,14 @@ Here is a visualization of 15 random images from the training dataset for each 4
    
    **Normalization**
    Neural networks process inputs using small weight values, and inputs with large integer values can disrupt or slow down the learning process. As such it is good practice to normalize the pixel values so that each pixel value has a value between 0 and 1. Resource: [Link1](https://machinelearningmastery.com/how-to-manually-scale-image-pixel-data-for-deep-learning/)
+   #### Sample image from training dataset
+![Sample image from training dataset](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/TrainingImagePreprocessing.png)
 
-![Sample image from training dataset][image4]
+   #### Sample image from validation dataset
+![Sample image from validation dataset](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/ValidationImagePreprocessing.png)
 
-![Sample image from validation dataset][image5]
-
-![Sample image from test dataset][image6]
+   #### Sample image from test dataset
+![Sample image from test dataset](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/TestImagePreprocessing.png)
 
 I decided not to generate additional data for now because the accuracy obtained on the test dataset is quite statifying (96%). As a future improvement, I could manually look at the individual images for which the model makes a wrong judgement. So that, I then can augment the dataset accordingly.
 
@@ -135,7 +119,8 @@ validation set accuracy of 0.978
 test set accuracy of 0.961
 Find below the learning curves. Both training and validation curves are converging toward 100%, however a gap between the two is still remaining. Future improvements could include techniques such as data augmentation to reduce overfitting even more.
 
-![Neural network learning curve][image8]
+   #### Neural network learning curve
+![Neural network learning curve](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/learningCurve.png)
 
 ### Test a Model on New Images
 
@@ -143,8 +128,7 @@ Find below the learning curves. Both training and validation curves are convergi
 
 Here are ten German traffic signs that I found on the web:
 
-![image12] ![image13] ![image14] ![image15] ![image16] 
-![image17] ![image18] ![image19] ![image20] ![image21] 
+![image12](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/1.png) ![image13](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/2.png) ![image14](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/3.png) ![image15](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/4.png) ![image16](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/5.png) ![image17](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/6.png) ![image18](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/7.png) ![image19](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/8.png) ![image20](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/9.png) ![image21](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/newImages/10.png)
 
 #### 2. The model's predictions on these new traffic signs and compare the results to predicting on the test set. 
 
@@ -164,4 +148,4 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 he model is relatively sure that it predicts the right sign (probabilities range from 88% to 100%). However for the only one that the model makes a wrong prediction, we can notice the model is not very sure about it (45.26%). However, the right prediction is part of the top 5 softmax probalities with 2.31% probability.
 
-![image11]
+![image11](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/explorations/top5Probabilities.png)
