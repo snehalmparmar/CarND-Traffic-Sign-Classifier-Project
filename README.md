@@ -1,28 +1,6 @@
 ## Project: Build a Traffic Sign Recognition Program
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-Overview
----
-In this project, you will use what you've learned about deep neural networks and convolutional neural networks to classify traffic signs. You will train and validate a model so it can classify traffic sign images using the [German Traffic Sign Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After the model is trained, you will then try out your model on images of German traffic signs that you find on the web.
-
-We have included an Ipython notebook that contains further instructions 
-and starter code. Be sure to download the [Ipython notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb). 
-
-We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
-
-To meet specifications, the project will require submitting three files: 
-* the Ipython notebook with the code
-* the code exported as an html file
-* a writeup report either as a markdown or pdf file 
-
-Creating a Great Writeup
----
-A great writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/481/view) as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
-
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
-
 The Project
 ---
 The goals / steps of this project are the following:
@@ -33,26 +11,65 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-### Dependencies
-This lab requires:
+### Dependencies and Setup  
+To work on this project consider following steps to setup your computer:
 
-* [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
+1: Install [Anaconda](https://www.anaconda.com/distribution/) and [OpenCV4](https://sourceforge.net/projects/opencvlibrary/files/4.1.1/opencv-4.1.1-vc14_vc15.exe/download) on you computer.
 
-The lab environment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
+2: Setup new `conda` [project_environment_setup](https://github.com/snehalmparmar/CarND-LaneLines-P1/blob/master/project_environment_setup.yml) using this yml script
 
-### Dataset and Repository
+3: Activate `conda` environmet each time you want to work with this or any other openCV project.
 
-1. Download the data set. The classroom has a link to the data set in the "Project Instructions" content. This is a pickled dataset in which we've already resized the images to 32x32. It contains a training, validation and test set.
-2. Clone the project, which contains the Ipython notebook and the writeup template.
-```sh
-git clone https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project
-cd CarND-Traffic-Sign-Classifier-Project
-jupyter notebook Traffic_Sign_Classifier.ipynb
-```
+4: Run the Jupyter Notebook and check the `test_videos_output` for results.
 
-### Requirements for Submission
-Follow the instructions in the `Traffic_Sign_Classifier.ipynb` notebook and write the project report using the writeup template as a guide, `writeup_template.md`. Submit the project code and writeup document.
+---
+## Installation Procedure
 
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+**Dowanload** [Anaconda](https://www.anaconda.com/distribution/) and [OpenCV4](https://sourceforge.net/projects/opencvlibrary/files/4.1.1/opencv-4.1.1-vc14_vc15.exe/download) based on your operating system `Windows`, `Mac`, `Linux`
 
+|        | Linux | Mac | Windows | 
+|--------|-------|-----|---------|
+| 64-bit | [64-bit (Link)][lin64] | [64-bit (Link)][mac64] | [64-bit (Link)][win64]
+| 32-bit | [32-bit (Link)][lin32] |  | [32-bit (Link)][win32]
+
+[win64]: https://www.anaconda.com/distribution/#windows
+[win32]: https://www.anaconda.com/distribution/#windows
+[mac64]: https://www.anaconda.com/distribution/#macos
+[lin64]: https://www.anaconda.com/distribution/#linux
+[lin32]: https://www.anaconda.com/distribution/#linux
+
+**Install** Anaconda on your computer.
+
+**Unzip** OpenCV inside Anaconda folder. Makesure the OpenCV folder name is 'opencv', if not rename it to 'opencv' to match with the [project_environment_setup](https://github.com/snehalmparmar/CarND-LaneLines-P1/blob/master/project_environment_setup.yml)
+
+**SetUp and Activate** `conda` environment using following steps:
+
+  Step1: Place the [project_environment_setup](https://github.com/snehalmparmar/CarND-LaneLines-P1/blob/master/project_environment_setup.yml) yml script inside the directory where Anaconda folder is available. Don't place it inside Anaconda folder.
+  
+  Step2: Open Anaconda prompt and execute following commands.
+  
+    conda env create -f project_environment_setup.yml
+    
+    conda activate carnd
+    
+    python -m ipykernel install --user --name carnd --display-name "Python 3.7 (carnd)"
+    
+    jupyter notebook
+  
+  Step3: If you have GIT installed in your computer, clone this project. Or download in your local drive. The command4 mentioned above will open jupyter notebook, navigate to the project you have cloned/dowanloaded and open `P1.ipynb`
+  
+**Run** `P1.ipynb` and check outputs in image folders and video output directory.
+
+**Deactivate** `carnd` environment using following command
+  
+    conda deactivate carnd
+
+## Dataset
+The image DataSet can be downloaded from this [Website](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset#Downloads)
+    
+## Questions & Feedback
+
+Contact me about this project and self driving car in general. I would be happy to connect with you.
+
+* Linkedin: [Snehal Parmar](https://www.linkedin.com/in/snehal-parmar-239a9112/)
+* Email: [snehalparmar.nvs@gmail.com](mailto:snehalparmar.nvs@gmail.com)
