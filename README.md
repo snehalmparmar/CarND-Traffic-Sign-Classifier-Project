@@ -16,7 +16,7 @@ To work on this project consider following steps to setup your computer:
 
 1: Install [Anaconda](https://www.anaconda.com/distribution/) and [OpenCV4](https://sourceforge.net/projects/opencvlibrary/files/4.1.1/opencv-4.1.1-vc14_vc15.exe/download) on you computer.
 
-2: Setup new `conda` [project_environment_setup](https://github.com/snehalmparmar/CarND-LaneLines-P1/blob/master/project_environment_setup.yml) using this yml script
+2: Setup new `conda` [project_environment_setup](https://github.com/snehalmparmar/CarND-Traffic-Sign-Classifier-Project/blob/master/project_environment_setup.yml) using this yml script
 
 3: Activate `conda` environmet each time you want to work with this or any other openCV project.
 
